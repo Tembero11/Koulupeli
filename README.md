@@ -1,5 +1,8 @@
 # Koulupeli Projekti
 
+### Tekniset Tiedot
+* Unity Editor -version **2021.3.22f1**
+
 ### Projektin tiedostot
 
 | Projekti | Esittely |
