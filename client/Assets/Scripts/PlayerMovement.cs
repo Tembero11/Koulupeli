@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         // K‰ynnist‰‰ pelin uudelleen
-        Invoke("Restart", 2);
+        Invoke("Restart", 0.5f);
     }
 
     void Restart()
