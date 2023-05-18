@@ -1,0 +1,25 @@
+{
+  "name": "koulupeli-scoreboard",
+  "version": "0.0.1",
+  "description": "Projektikurssin AM23 -pelin pistetaulukko",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tembero11/Koulupeli.git"
+  },
+  "authors": [
+    "Tembero11",
+    "malluuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tembero11/Koulupeli/issues"
+  },
+  "homepage": "https://github.com/Tembero11/Koulupeli#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

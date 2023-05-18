@@ -1,0 +1,150 @@
+:root {
+  --primary: #FFFFFF;
+  --on-primary: #121520;
+  --background: #121520;
+  --on-background: white;
+  --surface: #1B1E2C;
+  --on-surface: white;
+  --surface-hover: #2d334d;
+  --navbar-height: 60px;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  overflow: hidden scroll;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  font-family: 'VT323', monospace;
+  letter-spacing: 1px;
+}
+
+span, p, a {
+  font-size: 18px;
+}
+
+a {
+  color: var(--primary);
+}
+
+#navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 2000;
+  background-color: var(--primary);
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--surface);
+}
+
+#content {
+  margin-top: var(--navbar-height);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#scoreboard {
+  width: 40%;
+  min-width: 330px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border-radius: 20px;
+  padding: 5px;
+  counter-reset: placing-counter;
+}
+
+#scoreboard > :not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#show-more-btn {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+#show-more-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scoreboard-user {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  counter-increment: placing-counter;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 100ms;
+}
+
+#scoreboard > *:hover {
+  background-color: var(--surface-hover);
+}
+
+.scoreboard-user .placing {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.scoreboard-user .placing::before {
+  content: counter(placing-counter);
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.score-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+  color: black;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.score-badge .pts {
+  font-size: 12px;
+}
