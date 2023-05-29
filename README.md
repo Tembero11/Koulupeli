@@ -8,7 +8,7 @@
 | Projekti | Esittely |
 |-------------|---|
 | [client](https://github.com/Tembero11/Koulupeli/tree/main/client) | Unity Peli |
-| [server](https://github.com/Tembero11/Koulupeli/tree/main/server) | Palvelin |
+| [scoreboard](https://github.com/Tembero11/Koulupeli/tree/main/scoreboard) | Palvelin |
 | [docs](https://github.com/Tembero11/Koulupeli/tree/main/docs) | Dokumentaatio |
 
 ### Ryhmän jäsenet
