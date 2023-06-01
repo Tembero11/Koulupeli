@@ -3,29 +3,21 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
+    [SerializeField] GameObject obstaclePrefab;
+    [SerializeField] GameObject coinPrefab;
     private void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-        SpawnObstacle();
-        SpawnCoins();
     }
 
     // Tuhoo tilet 2 sekunttia sen jälkeen kun sitä on läpäisty
     private void OnTriggerExit(Collider other)
     {
-        groundSpawner.SpawnTile();
+        groundSpawner.SpawnTile(true);
         Destroy(gameObject, 2);
     }
 
-    private void Update()
-    {
-
-    }
-
-    public GameObject obstaclePrefab;
-
-
-    void SpawnObstacle()
+    public void SpawnObstacle()
     {
         // Valitse random paikka minne spawnaa este
         int obstacleSpawnIndex = Random.Range(2, 5);
@@ -35,9 +27,8 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
-    public GameObject coinPrefab;
 
-    void SpawnCoins()
+    public void SpawnCoins()
     {
         int coinsToSpwn = 5;
         for (int i = 0; i < coinsToSpwn; i++)
