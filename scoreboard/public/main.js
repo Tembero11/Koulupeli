@@ -21,12 +21,20 @@ function createScoreboardUserHTML(username, score) {
 
 // Testing...
 
-let score = 50;
-function loadScores() {
-  const scoreboard = document.getElementById("scoreboard");
-  for (let i = 1; i <= 5; i++) {
-    const html = createScoreboardUserHTML("User " + i, score += Math.round(Math.random() * 7));
-    scoreboard.prepend(html);
-  } 
+async function loadScores() {
+
+  const url = `http://${window.location.host}/api/v1/scoreboard/0/10`;
+  
+  try {
+    const res = await fetch(url);
+    const { entries } = (await res.json());
+
+    for (let i = 0; i < entries.length; i++) {
+      const { username, score } = entries[i];
+      const html = createScoreboardUserHTML(username, score);
+      scoreboard.appendChild(html);  
+    }
+  } catch (err) {
+  }
 }
 loadScores();

@@ -15,8 +15,19 @@ function updateScoreboard(newData) {
   fs.writeFileSync(scoreboardFilePath, JSON.stringify(newData), {encoding: "utf-8"});
 }
 
+
+function strToInteger(str) {
+  if (/^[0-9]+$/.test(str)) {
+    return +str;
+  }
+
+  return null;
+}
+
+
 module.exports = {
   getScoreboardFilepath,
   readScoreboard,
-  updateScoreboard
+  updateScoreboard,
+  strToInteger
 }
