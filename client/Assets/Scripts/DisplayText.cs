@@ -9,7 +9,7 @@ public class DisplayText : MonoBehaviour
 {
     public TMP_Text obj_text;
     public TMP_InputField display;
-    public string serverURL = "http://localhost:3000/api/v1/scoreboard"; // Replace with your server URL
+    public string serverURL = "http://localhost:5000"; // Replace with your server URL
 
     void Start()
     {

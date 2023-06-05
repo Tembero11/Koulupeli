@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj_text: {fileID: 2063340318}
   display: {fileID: 1260378559}
-  serverURL: http://localhost:5000/api/v1/scoreboard/
+  serverURL: localhost:5000
 --- !u!4 &422248775
 Transform:
   m_ObjectHideFlags: 0
