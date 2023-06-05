@@ -10,7 +10,6 @@ if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
 
 // Create the empty scoreboard file if not found
 const scoreboardPath = getScoreboardFilepath();
-console.log(scoreboardPath);
 if (!fs.existsSync(scoreboardPath)) {
   updateScoreboard({entries: []});
 }
